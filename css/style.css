@@ -5,3 +5,45 @@
     --VeryDarkBlue: hsl(229, 57%, 11%);
 
 }
+
+body {
+    background-color: var(--VeryDarkBlue);
+    background-image: url(../imgs/bg-desktop.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+}
+
+.contentone {
+    width: 350px;
+    height: 200px;
+    background-color: var(--DarkBlue);
+    border-radius: 10px 30% 10px 10px;
+    margin: 50px;
+}
+
+svg {
+    position: relative;
+    left: 40px;
+    top: 40px;
+}
+
+.icons {
+    position: relative;
+    top: 50px;
+    left: 30px;
+}
+
+.icons>svg {
+    margin-left: 10px;
+    background-color: var(--VeryDarkBlue);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+@font-face {
+    font-family: Raleway;
+    src: url(css/fontstyle/);
+}
