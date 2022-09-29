@@ -15,7 +15,7 @@ body {
 
 }
 
-.contentone {
+.content-one {
     width: 350px;
     height: 200px;
     background-color: var(--DarkBlue);
@@ -40,8 +40,51 @@ svg {
     background-color: var(--VeryDarkBlue);
     padding: 10px;
     border-radius: 5px;
+
 }
 
+.content-two {
+    height: 140px;
+    width: 500px;
+    border-radius: 15px;
+    background-color: var(--DarkBlue);
+    padding: 35px;
+    color: white;
+}
+
+.storage {
+    background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border-radius: 40px;
+    width: 330px;
+    height: 10px;
+}
+
+.remaining-storage {
+    background-color: var(--VeryDarkBlue);
+    width: 150px;
+    height: 11px;
+    border-radius: 40px;
+    position: relative;
+    bottom: 19px;
+    left: 323px;
+}
+
+P {
+    position: relative;
+    left: 5px;
+    top: 1px;
+}
+
+.min-storage {
+    position: relative;
+    top: 15px;
+}
+
+.max-storage {
+    position: relative;
+    top: 15px;
+    left: 390px;
+}
 
 @font-face {
     font-family: Raleway;
