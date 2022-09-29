@@ -20,11 +20,13 @@ body {
     background-position: bottom;
     background-repeat: no-repeat;
     height: 100vh;
+    font-family: Raleway;
 
 }
 
 .content-one {
     width: 350px;
+    min-width: 350px;
     height: 200px;
     background-color: var(--DarkBlue);
     border-radius: 10px 30% 10px 10px;
@@ -52,8 +54,9 @@ svg {
 }
 
 .content-two {
-    height: 140px;
-    width: 500px;
+    height: 15%;
+    width: 35%;
+    min-width: 350px;
     border-radius: 15px;
     background-color: var(--DarkBlue);
     padding: 35px;
@@ -63,22 +66,23 @@ svg {
 .storage {
     background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
     border-radius: 40px;
-    width: 330px;
-    height: 10px;
+    width: 80%;
+    height: 70%;
+    position: relative;
+    left: 0.7%;
+    top: 15%;
 }
 
 .remaining-storage {
     background-color: var(--VeryDarkBlue);
-    width: 150px;
-    height: 11px;
+    width: 100%;
+    height: 17%;
     border-radius: 40px;
     position: relative;
-    bottom: 19px;
-    left: 323px;
+
 }
 
-
-P {
+p {
     position: relative;
     left: 5px;
     top: 1px;
@@ -90,12 +94,29 @@ P {
 }
 
 .max-storage {
-    position: relative;
-    top: 15px;
-    left: 390px;
+    display: flex;
+    justify-content: end;
 }
 
 @font-face {
     font-family: Raleway;
-    src: url(css/fontstyle/);
+    src: url(fontstyle/Raleway/static/Raleway-Regular.ttf);
+}
+
+@media(max-width: 885px) {
+    body {
+        background-image: url(../imgs/bg-mobile.png);
+        background-size: contain;
+        background-size: cover;
+
+    }
+
+    .content-two {
+        position: relative;
+        bottom: 190px;
+    }
+
+
+
+
 }
