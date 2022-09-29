@@ -6,6 +6,21 @@
 
 }
 
+@font-face {
+    font-family: Raleway;
+    src: url(fonts/Raleway/static/Raleway-Regular.ttf);
+}
+
+@font-face {
+    font-family: Raleway-Bold;
+    src: url(fonts/Raleway/static/Raleway-Bold.ttf);
+}
+
+@font-face {
+    font-family: Raleway-light;
+    src: url(fonts/Raleway/static/Raleway-ExtraLight.ttf);
+}
+
 .content {
     height: 100%;
     display: flex;
@@ -73,6 +88,29 @@ svg {
     top: 15%;
 }
 
+/* .storage::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border: 1px white solid;
+
+} */
+.loading {
+    border: 2px solid white;
+    background: white;
+    width: 9px;
+    height: 10px;
+    border-radius: 50%;
+    margin-left: 96%;
+    position: relative;
+    top: 0.7px;
+}
+
+.bold-text {
+    font-family: Raleway-Bold;
+    font-weight: bolder;
+}
+
 .remaining-storage {
     background-color: var(--VeryDarkBlue);
     width: 100%;
@@ -82,10 +120,9 @@ svg {
 
 }
 
-p {
+.content-two>p {
     position: relative;
-    left: 5px;
-    top: 1px;
+    font-family: Raleway-light;
 }
 
 .min-storage {
@@ -98,9 +135,40 @@ p {
     justify-content: end;
 }
 
-@font-face {
-    font-family: Raleway;
-    src: url(fontstyle/Raleway/static/Raleway-Regular.ttf);
+.box3 {
+
+    background-color: white;
+    width: fit-content;
+    padding: 15px 25px;
+    position: relative;
+    left: 67%;
+    bottom: 140px;
+    border-radius: 7px 7px 0 7px;
+}
+
+.box3:after {
+    content: " ";
+    position: absolute;
+    right: 0px;
+    bottom: -14px;
+    border-top: 15px solid white;
+    border-right: none;
+    border-left: 20px solid transparent;
+    border-bottom: none;
+}
+
+
+
+
+.remaining-GB {
+    color: black;
+    font-size: 20px;
+    font-family: Raleway-Bold;
+}
+
+.GB-LEFT {
+    font-size: 8px;
+    color: gray;
 }
 
 @media(max-width: 885px) {
@@ -116,6 +184,22 @@ p {
         bottom: 190px;
     }
 
+    .box3 {
+        position: relative;
+        top: 60px;
+        left: 98px;
+        width: 85px;
+        height: 30px;
+        border-radius: 6px;
+    }
+
+    .box3:after {
+        display: none;
+    }
+
+    .content-two>p {
+        text-align: center;
+    }
 
 
 
