@@ -75,26 +75,6 @@ svg {
     left: -10px;
 }
 
-/* .icons>svg {
-    margin: 10px;
-    background-color: var(--VeryDarkBlue);
-    padding: 15px;
-    border-radius: 15px;
-    width: 40px;
-    height: 40px;
-
-} */
-
-/* .icons>img {
-    margin: 10px;
-    background-color: var(--VeryDarkBlue);
-    padding: 20px;
-    border-radius: 5px;
-    width: 40px;
-    height: 40px;
-
-} */
-
 .icons {
     display: flex;
     justify-content: center;
@@ -138,14 +118,6 @@ svg {
     top: 15%;
 }
 
-/* .storage::after {
-    content: "";
-    width: 10px;
-    height: 10px;
-    border: 1px white solid;
-
-} */
-
 .storage::after {
     content: "";
     border: 6px white solid;
@@ -153,17 +125,6 @@ svg {
     border-radius: 50%;
     right: 2px;
 }
-
-/* .loading {
-    border: 2px solid white;
-    background: white;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    margin-left: 96%;
-    position: relative;
-    top: 1.3px;
-} */
 
 .bold-text {
     font-family: Raleway-Bold;
