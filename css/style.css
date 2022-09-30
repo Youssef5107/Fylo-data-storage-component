@@ -212,6 +212,10 @@ svg {
 
     }
 
+    .icons {
+        margin-right: 100px;
+    }
+
     .content-one {
         min-width: 420px;
     }
