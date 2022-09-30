@@ -21,13 +21,6 @@
     src: url(fonts/Raleway/static/Raleway-ExtraLight.ttf);
 }
 
-.content {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
 
 body {
     background-color: var(--VeryDarkBlue);
@@ -39,13 +32,35 @@ body {
 
 }
 
+.content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+
+.content-two {
+    height: 15%;
+    width: 35%;
+    min-width: 350px;
+    border-radius: 15px;
+    background-color: var(--DarkBlue);
+    padding: 35px;
+    color: white;
+    margin: 0 25px;
+}
+
 .content-one {
     width: 350px;
-    min-width: 350px;
-    height: 200px;
+    height: 225px;
     background-color: var(--DarkBlue);
     border-radius: 10px 30% 10px 10px;
-    margin: 50px;
+    margin: 0px 10px;
+    position: relative;
+    bottom: 15px;
 }
 
 svg {
@@ -60,23 +75,58 @@ svg {
     left: -10px;
 }
 
-.icons>svg {
-    margin-left: 10px;
+/* .icons>svg {
+    margin: 10px;
+    background-color: var(--VeryDarkBlue);
+    padding: 15px;
+    border-radius: 15px;
+    width: 40px;
+    height: 40px;
+
+} */
+
+/* .icons>img {
+    margin: 10px;
+    background-color: var(--VeryDarkBlue);
+    padding: 20px;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+
+} */
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
+    margin-top: 15px;
+}
+
+.icons>.img {
+    margin: 10px;
     background-color: var(--VeryDarkBlue);
     padding: 10px;
-    border-radius: 5px;
-
-}
-
-.content-two {
-    height: 15%;
-    width: 35%;
-    min-width: 350px;
     border-radius: 15px;
-    background-color: var(--DarkBlue);
-    padding: 35px;
-    color: white;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
+.icons .img:nth-child(1) {
+    background-image: url("../imgs/icon-document.svg");
+}
+
+.icons .img:nth-child(2) {
+    background-image: url("../imgs/icon-folder.svg");
+}
+
+.icons .img:nth-child(3) {
+    background-image: url("../imgs/icon-upload.svg");
+}
+
 
 .storage {
     background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
@@ -95,16 +145,25 @@ svg {
     border: 1px white solid;
 
 } */
-.loading {
+
+.storage::after {
+    content: "";
+    border: 6px white solid;
+    position: absolute;
+    border-radius: 50%;
+    right: 2px;
+}
+
+/* .loading {
     border: 2px solid white;
     background: white;
-    width: 9px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     margin-left: 96%;
     position: relative;
-    top: 0.7px;
-}
+    top: 1.3px;
+} */
 
 .bold-text {
     font-family: Raleway-Bold;
@@ -115,6 +174,7 @@ svg {
     background-color: var(--VeryDarkBlue);
     width: 100%;
     height: 17%;
+    height: 19px;
     border-radius: 40px;
     position: relative;
 
@@ -128,11 +188,13 @@ svg {
 .min-storage {
     position: relative;
     top: 15px;
+    font-family: Raleway-Bold;
 }
 
 .max-storage {
     display: flex;
     justify-content: end;
+    font-family: Raleway-Bold;
 }
 
 .box3 {
@@ -162,7 +224,7 @@ svg {
 
 .remaining-GB {
     color: black;
-    font-size: 20px;
+    font-size: 30px;
     font-family: Raleway-Bold;
 }
 
@@ -171,7 +233,7 @@ svg {
     color: gray;
 }
 
-@media(max-width: 885px) {
+@media(min-width: 376px) and (max-width: 855px) {
     body {
         background-image: url(../imgs/bg-mobile.png);
         background-size: contain;
@@ -179,18 +241,18 @@ svg {
 
     }
 
-    .content-two {
-        position: relative;
-        bottom: 190px;
-    }
-
     .box3 {
         position: relative;
         top: 60px;
         left: 98px;
-        width: 85px;
-        height: 30px;
+        width: fit-content;
+        height: 40px;
         border-radius: 6px;
+
+    }
+
+    .content-one {
+        min-width: 420px;
     }
 
     .box3:after {
@@ -200,6 +262,44 @@ svg {
     .content-two>p {
         text-align: center;
     }
+
+    .remaining-GB {
+        font-size: 35px;
+    }
+
+    .GB-LEFT {
+        font-size: 15px;
+    }
+}
+
+@media(max-width:375px) {
+    .box3 {
+        position: relative;
+        top: 30px;
+        left: 45px;
+        padding: 10px;
+
+    }
+
+    .box3:after {
+        display: none;
+    }
+
+    .content-two {
+        min-width: 257px;
+        margin-right: 10%;
+    }
+
+    .content-one {
+        margin-right: 6%;
+        width: 330px;
+    }
+
+    .icons {
+        padding-left: 38px;
+        margin-right: 35px;
+    }
+
 
 
 
